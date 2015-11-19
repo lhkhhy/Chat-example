@@ -1,0 +1,11 @@
+{
+    "name":"Chat-example",
+    "description":"my first socket.io app",
+    "dependencies":{
+        "express":"*",
+        "socket.io":"*",
+        "mongo":"*",
+        "connect-mongo":"*",
+        "express-session":"*"
+    }
+}

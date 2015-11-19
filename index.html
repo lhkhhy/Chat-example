@@ -1,0 +1,30 @@
+        <script type="text/javascript">
+            (function(){
+                $("register").live("click",function(){
+                    var pwd = $("#password").val();
+                    var repeatPwd = $("#repeatpassword").val();
+                    if(pwd!=repeatPwd){
+                        $("#msg").html("密码输入不一致");
+                        return;
+                    }
+
+                    $("#registerform").submit();
+                })
+            })
+        </script>
+    <form action="/register" id="registerform">
+        <table style="width:400px; vertical-align: middle; text-align:center;" >
+            <tr><td>
+                用户名：<input type="text" name="username" id="username">
+            </td></tr>
+            <tr><td>
+                密码：<input type="text" name="password" id="password">
+            </td></tr>
+            <tr><td>
+                重复密码：<input type="text" name="repeatpassword" id="repeatpassword">
+            </td></tr>
+            <tr><td>
+                <input type="button" value="注册" id="register"><span id="msg" style="font-color:red;"></span>
+            </td></tr>
+        </table>
+    </form>
